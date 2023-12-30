@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2072439635cac92f708665ec379f0934",
+    "content-hash": "7ea6e283afefe9da23dd5582b6bf7b62",
     "packages": [
         {
             "name": "brick/math",
@@ -193,7 +193,7 @@
         },
         {
             "name": "codeigniter4/shield",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/shield.git",
@@ -227,7 +227,6 @@
                 "ext-curl": "Required to use the password validation rule via PwnedValidator class.",
                 "ext-openssl": "Required to use the JWT Authenticator."
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -4553,9 +4552,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "codeigniter4/shield": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
