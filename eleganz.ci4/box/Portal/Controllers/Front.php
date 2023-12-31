@@ -9,4 +9,8 @@ class Front extends BaseController
         return 'Portal Page';
         //return view('welcome_message');
     }
+    public function index()
+    {
+        echo 'Welcome 2024';
+    }
 }
