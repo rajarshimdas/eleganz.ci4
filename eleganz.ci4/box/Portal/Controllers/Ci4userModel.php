@@ -16,7 +16,9 @@ class UserModel extends Model
 
     protected $allowedFields = []; // None. Readonly
 
-    /* Not required since readonly
+    /* 
+    Not required since this is a readonly model
+
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
