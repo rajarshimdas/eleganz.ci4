@@ -2,11 +2,11 @@
 
 namespace Rd\Portal\Controllers;
 
-class Front extends PortalController
+class Front extends BaseController
 {
     public function home(): string
     {
-        return 'Portal';
+        return 'Portal Page';
         //return view('welcome_message');
     }
 }

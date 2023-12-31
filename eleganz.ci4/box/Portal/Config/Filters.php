@@ -1,14 +1,14 @@
 <?php
 
-namespace Config;
+namespace Rd\Portal\Config;
 
-// use App\Filters\Rajarshi;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
+use Rd\Portal\Filters\Rajarshi;
 
 class Filters extends BaseConfig
 {
@@ -26,7 +26,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        // 'rajarshi'      => Rajarshi::class,
+        'rajarshi'      => Rajarshi::class,
     ];
 
     /**

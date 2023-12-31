@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Rd\Portal\Models;
 
 use CodeIgniter\Model;
 
