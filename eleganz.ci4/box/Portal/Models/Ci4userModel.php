@@ -14,7 +14,11 @@ class UserModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = []; // None. Readonly
+    protected $allowedFields = ['active']; // Set 0 to delete an user
+
+    protected $validationMessages = [
+        'active' => 'required|is_natural|less_than[2]',
+    ];
 
     /* 
     Not required since this is a readonly model

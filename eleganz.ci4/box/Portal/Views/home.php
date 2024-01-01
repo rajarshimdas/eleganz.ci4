@@ -1,3 +1,5 @@
 <h1>
-Welcome to home page.
+Welcome, <?= $user['username'] ?> to home page. uid: <?= $user_id ?>
 </h1>
+
+<?php var_dump($user);

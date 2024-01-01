@@ -9,4 +9,5 @@ sudo chown -R rd:rd .
 sudo chown -R rd:www-data $fx
 sudo chmod -R 775 $fx
 sudo chmod +x eleganz.ci4/spark
+sudo chmod +x *.sh
 

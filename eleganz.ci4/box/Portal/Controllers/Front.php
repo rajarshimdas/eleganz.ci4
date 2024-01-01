@@ -4,16 +4,26 @@ namespace Rd\Portal\Controllers;
 
 class Front extends BaseController
 {
-    private $ns = "123";
+    private $db;
+    private $user_id;
+    private $user;
     
-    public function home(): string
-    {
-        return 'Portal Page';
-        //return view('welcome_message');
+
+    function __construct(){
+
+        $this->db = db_connect();
+        $this->user_id = $_SESSION["user"]["id"];
+        
+        $this->user = rdGetUserById($this->user_id, $this->db);
+
     }
+
     public function index()
     {
+        
         $data = [
+            'user_id' => $this->user_id,
+            'user' => $this->user,
             "year" => '2024',
         ];
         return view('Rd\Portal\Views\home', $data);
