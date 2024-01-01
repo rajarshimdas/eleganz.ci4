@@ -4,6 +4,8 @@ namespace Rd\Portal\Controllers;
 
 class Front extends BaseController
 {
+    private $ns = "123";
+    
     public function home(): string
     {
         return 'Portal Page';
@@ -11,6 +13,9 @@ class Front extends BaseController
     }
     public function index()
     {
-        echo 'Welcome 2024';
+        $data = [
+            "year" => '2024',
+        ];
+        return view('Rd\Portal\Views\home', $data);
     }
 }

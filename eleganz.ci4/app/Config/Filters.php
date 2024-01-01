@@ -41,6 +41,10 @@ class Filters extends BaseConfig
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
+
+            // Protect all pages
+            // https://shield.codeigniter.com/quick_start_guide/using_session_auth/
+            'session' => ['except' => ['login*', 'register', 'auth/a/*', 'logout']],
         ],
         'after' => [
             'toolbar',
