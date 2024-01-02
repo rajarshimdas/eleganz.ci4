@@ -88,7 +88,7 @@
 
 
 <h1>
-Welcome, <?= $username ?> to home page. uid: <?= $user_id ?>
+Welcome, <?= $user['dname'] ?> to home page. uid: <?= $ci4_user_id ?>
 </h1>
 
-<?php // var_dump($user);
+<?php var_dump($user);

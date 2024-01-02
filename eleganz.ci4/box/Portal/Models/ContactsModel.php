@@ -4,25 +4,47 @@ namespace Rd\Portal\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class ContactsModel extends Model
 {
-    protected $table      = 'ci4_users';
+    protected $table      = 'contacts';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
-    
+
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['active']; // Set 0 to delete an user
+    protected $allowedFields = [
+
+        'ci4_users_id',
+        'dname',
+        'fname',
+        'mname',
+        'lname',
+        'gender',
+        'dob',
+        'current_address_id',
+        'active',
+
+    ];
+
 
     protected $validationRules = [
+
+        'ci4_users_id' => 'required',
+        'dname' => 'required',
+        'fname' => 'required',
+        'mname' => 'required',
+        'lname' => 'required',
+        'gender' => 'required',
+        'dob' => 'required',
+        'current_address_id' => 'required',
         'active' => 'required|is_natural|less_than[2]',
+
     ];
 
     /* 
-    Not required since this is a readonly model
-
+    
     // Dates
     protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
@@ -47,5 +69,4 @@ class UserModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
     */
-    
 }

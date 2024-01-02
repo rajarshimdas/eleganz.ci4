@@ -46,7 +46,7 @@ abstract class BadDragon extends Controller
      * The creation of dynamic property is deprecated in PHP 8.2.
      */
     // protected $session;
-    
+
     // The currently logged in User
     protected $user;
 
@@ -65,11 +65,18 @@ abstract class BadDragon extends Controller
 
 
         // Shield - Fetch details of currently logged in User
+        
         // Get the User Provider (UserModel by default)
         $users = auth()->getProvider();
         // To get the complete user object with ID, we need to get from the database
-        $this->user = $users->findById($_SESSION['user']['id']);
+        $thisUser = $users->findById($_SESSION['user']['id']);
+        
+        $contactsModel = model('ContactsModel');
+        $userArray = $contactsModel->where('ci4_users_id', $_SESSION['user']['id'])->asArray()->find();
 
+        $user = $userArray[0];
+        $user['username'] = $thisUser->username;
+        
+        $this->user = $user;
     }
-
 }

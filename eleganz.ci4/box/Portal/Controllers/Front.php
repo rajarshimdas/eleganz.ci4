@@ -4,29 +4,25 @@ namespace Rd\Portal\Controllers;
 
 class Front extends BadDragon
 {
-    
+
     function __construct()
     {
-
     }
 
     public function index()
     {
-        
-        
-        $user = $this->user;
-        /*
-        echo '<pre>';
-        var_dump($user->username);
-        echo '</pre>';
-       */ 
-        $data = [
-            'user_id' => $user->id,
-            'username' => $user->username,
-            "year" => '2024',
 
+
+        $user = $this->user;
+
+        $data = [
+            'user' => $user,
+            'ci4_user_id' => $user['ci4_users_id'],
+            'username' => $user['username'],
+            
+            
         ];
-        return view('Rd\Portal\Views\home', $data);
-    
+        return view('Rd\Portal\Views\home', $data); 
+        
     }
 }
