@@ -7,7 +7,7 @@
     <title><?= $this->renderSection('title') ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?= base_url('box/bs5/css/bootstrap.min.css') ?>" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="<?= base_url('box/bs5/css/bootstrap.min.css') ?>" rel="stylesheet">
 
     <?= $this->renderSection('pageStyles') ?>
 </head>

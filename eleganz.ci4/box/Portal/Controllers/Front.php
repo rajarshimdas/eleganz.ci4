@@ -2,30 +2,31 @@
 
 namespace Rd\Portal\Controllers;
 
-class Front extends BaseController
+class Front extends BadDragon
 {
-    private $db;
-    private $user_id;
-    private $user;
     
-
-    function __construct(){
-
-        $this->db = db_connect();
-        $this->user_id = $_SESSION["user"]["id"];
-        
-        $this->user = rdGetUserById($this->user_id, $this->db);
+    function __construct()
+    {
 
     }
 
     public function index()
     {
         
+        
+        $user = $this->user;
+        /*
+        echo '<pre>';
+        var_dump($user->username);
+        echo '</pre>';
+       */ 
         $data = [
-            'user_id' => $this->user_id,
-            'user' => $this->user,
+            'user_id' => $user->id,
+            'username' => $user->username,
             "year" => '2024',
+
         ];
         return view('Rd\Portal\Views\home', $data);
+    
     }
 }

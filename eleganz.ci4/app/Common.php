@@ -13,7 +13,13 @@
  *
  * @see: https://codeigniter.com/user_guide/extending/common.html
  */
+global $rdConfigVars;
+// Variables
+$rdConfigVars['CompanyNameShort'] = 'Eleganz';
+$rdConfigVars['CompanyNameFull'] = 'Eleganz Interiors Pvt Ltd';
 
+
+// Functions
 function rdGetUserById($user_id, $db) :array
 {
     // echo 'fx uid: '.$user_id;

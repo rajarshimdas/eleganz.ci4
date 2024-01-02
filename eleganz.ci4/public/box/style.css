@@ -1,15 +1,25 @@
 /*
-+-------------------------------------------------------------------+
-| Rajarshi Das                                                      |
-+-------------------------------------------------------------------+
-| Created: 27 Dec 2023 (Kharar, Punjab)                             |
-+-------------------------------------------------------------------+
-| Updated:                                                          |
-+-------------------------------------------------------------------+
++-------------------------------------------------------+
+| Rajarshi Das						                    |
++-------------------------------------------------------+
+| Created On: 22-Dec-2022				                |
+| Updated On: 											|
++-------------------------------------------------------+
 */
-
 :root {
-    --ez-color-prime: #bd2347;
-    --ez-about-me-background: #f1cad1;
-    --ez-background-color: whitesmoke;
+    --rd-banner-bgcolor: #021e39;
+    --rd-banner-color: white;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: RGB(30, 30, 30);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
