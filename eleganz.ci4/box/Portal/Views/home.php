@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eleganz</title>
+    <title><?= $_ENV['RD_COMPANY_NAME_SHORT'] ?></title>
     <link rel="icon" href="<?= base_url('box/images/arkafe.png') ?>">
 
     <link href="box/bs5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -22,8 +22,8 @@
             <div class="col">
                 Eleganz
             </div>
-            <div class="col">
-                CONCERT
+            <div class="col" style="font-weight: 400;">
+                <?= 'CONCERT | '.$_ENV['RD_COMPANY_NAME'] ?>
             </div>
             <div class="rd-banner-profile col col-md-2">
                 <div>
