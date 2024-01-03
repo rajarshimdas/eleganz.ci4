@@ -27,7 +27,7 @@
     </style>
     <div id="rd-banner" class="container-fluid">
         <p>
-            Eleganz
+            Eleganz <a class="btn btn-light" href="<?= base_url('logout') ?>">logout</a>
         </p>
         <div class="container-fluid">
             <style>
@@ -87,8 +87,10 @@
 
 
 
-<h1>
-Welcome, <?= $user['dname'] ?> to home page. uid: <?= $ci4_user_id ?>
-</h1>
+    <h1>
+        Welcome, <?= $user['dname'] ?> to home page. uid: <?= $ci4_user_id ?>
+    </h1>
 
-<?php var_dump($user);
+    <pre>
+        <?php var_dump($user); ?>
+    </pre>

@@ -47,7 +47,11 @@ abstract class BadDragon extends Controller
      */
     // protected $session;
 
-    // The currently logged in User
+    /**
+     * The currently logged in User
+     * 
+     * @var array
+     */
     protected $user;
 
     /**
@@ -65,18 +69,29 @@ abstract class BadDragon extends Controller
 
 
         // Shield - Fetch details of currently logged in User
-        
+        $ci4_users_id = $_SESSION['user']['id'];
+
         // Get the User Provider (UserModel by default)
         $users = auth()->getProvider();
         // To get the complete user object with ID, we need to get from the database
-        $thisUser = $users->findById($_SESSION['user']['id']);
-        
-        $contactsModel = model('ContactsModel');
-        $userArray = $contactsModel->where('ci4_users_id', $_SESSION['user']['id'])->asArray()->find();
+        $thisUser = $users->findById($ci4_users_id);
 
-        $user = $userArray[0];
+        $contactsModel = model('ContactsModel');
+        $userArray = $contactsModel
+                        ->where('ci4_users_id', $ci4_users_id)
+                        ->where('active', 1)
+                        ->asArray()
+                        ->find();
+
+        if (count($userArray) > 0) {
+            $user = $userArray[0];
+        } else {
+            die('Error :: Your [ '.$thisUser->username.' ] profile details could not be fetched.');
+        }
+
+        $user['ci4_users_id'] = $ci4_users_id;
         $user['username'] = $thisUser->username;
-        
+
         $this->user = $user;
     }
 }
