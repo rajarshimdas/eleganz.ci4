@@ -2,7 +2,7 @@
 +-------------------------------------------------------+
 | Rajarshi Das						                    |
 +-------------------------------------------------------+
-| Created On: 22-Dec-2022				                |
+| Created On: 27-Dec-2022				                |
 | Updated On: 											|
 +-------------------------------------------------------+
 */
@@ -11,9 +11,18 @@
     --rd-banner-color: white;
 }
 
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: Miltonian;
+    src: url("fonts/MiltonianTattoo-Regular.ttf");
+}
+
 body {
     background-color: whitesmoke;
-    font-family: 'Roboto';
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 300;
     color: RGB(30, 30, 30);
     margin: 0;
@@ -23,3 +32,92 @@ body {
 a {
     text-decoration: none;
 }
+
+/*
++-------------------------------------------------------+
+| Banner and Menu - Start                               |
++-------------------------------------------------------+
+*/
+
+#rd-banner {
+    background-color: var(--rd-banner-bgcolor);
+    color: var(--rd-banner-color);
+    font-weight: 700;
+}
+
+#rd-nav {
+    font-weight: 400;
+}
+
+#rd-nav.nav-link {
+    text-decoration: none;
+}
+
+#rd-nav li.nav-item * {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    height: 32px;
+    margin: auto;
+    padding-top: 4px;
+}
+
+#rd-nav li.nav-item :hover {
+    background-color: RGB(160, 160, 160);
+    color: black;
+}
+
+#rd-nav li.active,
+#rd-nav li.active :hover {
+    background-color: RGB(200, 200, 200);
+}
+
+#rd-nav li a {
+    color: white;
+}
+
+#rd-nav li.active a {
+    color: black;
+}
+
+.rd-banner-top {
+    height: 50px;
+    margin: auto;
+
+}
+
+.rd-banner-top div {
+    /* background-color: yellow; */
+    vertical-align: middle;
+    margin: auto;
+}
+
+.rd-banner-top a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: white;
+}
+
+.rd-banner-profile {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    margin: auto
+}
+
+.rd-banner-menu {
+    background-color: RGB(200, 200, 200);
+    color: black;
+    text-align: center;
+    padding: 0.3rem;
+    border-bottom: 1px solid var(--rd-banner-bgcolor);
+    height: 50px
+}
+
+/*
++-------------------------------------------------------+
+| Banner and Menu - End                                 |
++-------------------------------------------------------+
+*/
+
