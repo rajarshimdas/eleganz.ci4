@@ -24,63 +24,117 @@
             color: var(--rd-banner-color);
             font-weight: 700;
         }
+
+        #rd-nav {
+            font-weight: 400;
+        }
+
+        #rd-nav.nav-link {
+            text-decoration: none;
+
+        }
+
+        #rd-nav li.nav-item * {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            height: 32px;
+            margin: auto;
+            padding: 4px 25px 0 25px;
+        }
+
+        #rd-nav li.nav-item :hover {
+            background-color: RGB(160, 160, 160);
+            color: black;
+        }
+
+        #rd-nav li.active,
+        #rd-nav li.active :hover {
+            background-color: RGB(200, 200, 200);
+        }
+
+        #rd-nav li a {
+            color: white;
+        }
+
+        #rd-nav li.active a {
+            color: black;
+        }
+
+        .rd-banner-top {
+            height: 50px;
+            margin: auto;
+
+        }
+
+        .rd-banner-top div {
+            /* background-color: yellow; */
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        .rd-banner-top a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.7rem;
+            color: white;
+        }
+
+        .rd-banner-profile {
+            display: block;
+            text-align: right;
+            font-size: 0.8rem;
+            margin: auto
+        }
     </style>
     <div id="rd-banner" class="container-fluid">
-        <p>
-            Eleganz <a class="btn btn-light" href="<?= base_url('logout') ?>">logout</a>
-        </p>
+        <div class="rd-banner-top row">
+
+            <div class="col">
+                Eleganz
+            </div>
+            <div class="col">
+                Placeholder
+            </div>
+            <div class="rd-banner-profile col">
+                <div>
+                    <?= $user['dname'] ?>
+                </div>
+                <div>
+                    <a href="<?= base_url('profile') ?>">Profile</a> | <a href="<?= base_url('logout') ?>">Logout</a>
+                </div>
+
+            </div>
+
+        </div>
         <div class="container-fluid">
-            <style>
-                #rd-nav {
-                    font-weight: 400;
-                }
-
-                #rd-nav.nav-link {
-                    text-decoration: none;
-
-                }
-
-                #rd-nav li.nav-item {
-                    border-radius: 0;
-                }
-
-                #rd-nav li.nav-item :hover {
-                    background-color: RGB(160, 160, 160);
-                    color: black;
-                    border-radius: 0;
-                }
-
-                #rd-nav li.active,
-                #rd-nav li.active :hover {
-                    background-color: RGB(200, 200, 200);
-                }
-
-                #rd-nav li a {
-                    color: white;
-                }
-
-                #rd-nav li.active a {
-                    color: black;
-                }
-            </style>
             <ul id="rd-nav" class="nav nav-pills">
                 <li class="nav-item active">
                     <a class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#">MIS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CRM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HRM</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Addressbook</a>
+                    <a class="nav-link" href="#">Timesheets</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Wiki</a>
                 </li>
             </ul>
         </div>
-
     </div>
-    <div style="background-color: RGB(200, 200, 200);color:black; text-align:center;padding:0.3rem;">
+    
+    <div style="background-color: RGB(200, 200, 200);color:black; text-align:center;padding:0.3rem;border-bottom:1px solid black; height:50px">
         Menubar
     </div>
 
