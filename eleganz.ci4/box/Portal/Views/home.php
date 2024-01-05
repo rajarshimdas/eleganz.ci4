@@ -23,7 +23,7 @@
                 Eleganz
             </div>
             <div class="col" style="font-weight: 400;">
-                <?= 'CONCERT | '.$_ENV['RD_COMPANY_NAME'] ?>
+                <?= 'CONCERT | ' . $_ENV['RD_COMPANY_NAME'] ?>
             </div>
             <div class="rd-banner-profile col col-md-2">
                 <div>
@@ -67,15 +67,14 @@
     <div class="rd-banner-menu">
         Menubar
     </div>
+    <div>
+        Welcome, <?= $user['dname'] ?> to home page. uid: <?= $ci4_user_id ?>
+    </div>
 
 
+    <?php
 
-
-
-    Welcome, <?= $user['dname'] ?> to home page. uid: <?= $ci4_user_id ?>
-
-
-    <pre>
-        <?php // var_dump($user); 
-        ?>
-    </pre>
+    $uri = current_url(true);
+    // echo (string) $uri; 
+    // echo $uri->getPath();
+    echo $uri->getSegment(1);
